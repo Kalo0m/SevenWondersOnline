@@ -1,7 +1,9 @@
   // Set the configuration for your app
   // TODO: Replace with your project's config object
+  require('dotenv').config()
+  
   var config = {
-    apiKey: "AIzaSyAjhI4v5aTxCNIc6QzvWG9OTAxEkOwvYdk",
+    apiKey: process.env.API_KEY,
     authDomain: "sevenwonders-742f3.firebaseapp.com",
     // For databases not in the us-central1 location, databaseURL will be of the
     // form https://[databaseName].[region].firebasedatabase.app.

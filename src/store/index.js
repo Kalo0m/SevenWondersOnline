@@ -10,7 +10,6 @@ export const store = createStore({
   actions: {
     fetchGame({ state }) {
       firebase.ref().on('value', (snap) => {
-        console.log()
         state.games = snap.val().game1
       });
     }

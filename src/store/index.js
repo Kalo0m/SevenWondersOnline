@@ -4,14 +4,16 @@ import firebase from '../plugins/firebase'
 export const store = createStore({
   state () {
     return {
-      games: null
+      game: null
     }
   },
   actions: {
     fetchGame({ state }) {
-      firebase.ref().on('value', (snap) => {
-        state.games = snap.val().game1
-      });
+      firebase.collection("games").doc("game1")
+        .onSnapshot((doc) => {
+          state.game = doc.data();
+        });
+
     }
   }
 })

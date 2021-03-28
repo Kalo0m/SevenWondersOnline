@@ -1,5 +1,5 @@
 <template>
-  <div> il y a {{ $store.state.games.nbPlayers }} joueurs dans la partie </div>
+  <div> il y a {{ $store.state.game.nbPlayers }} joueurs dans la partie </div>
 </template>
 
 <script>

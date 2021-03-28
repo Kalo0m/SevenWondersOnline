@@ -1,16 +1,22 @@
 <template>
-  <div> il y a {{ $store.state.game.nbPlayers }} joueurs dans la partie </div>
+  <div class="h-screen p-10"> 
+    <Board />
+  </div>
 </template>
 
 <script>
+import Board from './Board.vue'
+
 export default {
   name: 'Game',
+  components: { Board },
   props: {
     msg: String
   },
   data() {
     return {
-      count: 0
+      
+
     }
   }
 }

@@ -13,7 +13,6 @@ export const store = createStore({
         .onSnapshot((doc) => {
           state.game = doc.data();
         });
-
     }
   }
 })

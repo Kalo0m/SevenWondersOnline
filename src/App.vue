@@ -1,17 +1,14 @@
 <template>
-  <Game />
+  <router-view />
 </template>
 
 <script>
-import Game from './components/Game.vue'
+import Game from './views/Game.vue'
 
 export default {
   name: 'App',
   components: {
     Game
   },
-  created() {
-    this.$store.dispatch('fetchGame')
-  }
 }
 </script>
